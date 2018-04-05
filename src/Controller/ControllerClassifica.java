@@ -86,7 +86,7 @@ public class ControllerClassifica {
                             if (String.valueOf(caracter).matches("[0-9]")) {
                                 boolean num = false;
                                 // se for numero verifica 
-                                while (String.valueOf(caracter).matches("[0-9a-zA-Z_]")) {
+                                while (String.valueOf(caracter).matches("[0-9a-zA-Z_.]")) {
 
                                     caracter = texto.charAt(i);
                                     paToken += String.valueOf(caracter);
