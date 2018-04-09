@@ -17,6 +17,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import Sintatico.AnalisadorSintatico;
 
 public class UserInterface extends javax.swing.JFrame {
 
@@ -29,8 +30,8 @@ public class UserInterface extends javax.swing.JFrame {
     public String data;
 
     public void setTitle(String title) {
-        super.setTitle("@CompAlg"); 
-        
+        super.setTitle("@CompAlg");
+
     }
 
     public UserInterface() {
@@ -212,6 +213,13 @@ public class UserInterface extends javax.swing.JFrame {
         String texto = String.valueOf(Area_Texto.getText());
         ControllerClassifica cc = new ControllerClassifica();
         listaToken = cc.getPalavra(texto);
+        
+        
+        AnalisadorSintatico Sintatico = new AnalisadorSintatico();
+        if (Sintatico.Analisar(listaToken) == AnalisadorSintatico.AnaliseSintatica_ComErros) {
+            JOptionPane.showMessageDialog(null, Sintatico.returnErro());
+        }
+
         getListaMunuAtt(listaToken);
     }//GEN-LAST:event_AnalisarActionPerformed
 
