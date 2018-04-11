@@ -22,9 +22,9 @@ public class AnalisadorSintatico {
     }    
     
     public AnalisadorSintatico() {
-        pilha.addFirst(44);
+        pilha.addFirst(51);
         System.out.println("Insiriu na pilha a regra numero: 44");
-        pilha.addFirst(46); 
+        pilha.addFirst(52); 
         System.out.println("Insiriu na pilha a regra numero: 46\n\n");
         
     }
@@ -57,7 +57,7 @@ public class AnalisadorSintatico {
                 pilha.removeFirst(); //Retire o elemento do topo da pilha
                 
                 topPilha = pilha.getFirst();   //X recebe o topo da pilha 
-            } else if ((topPilha >= 1) && (topPilha <= 45)) { //Se X é terminal então
+            } else if ((topPilha >= 1) && (topPilha <= 50)) { //Se X é terminal então
                 if (topPilha == simboloEntrada) {//Se X=a então
                     pilha.removeFirst();//Retire o elemento do topo da pilha
                     
@@ -65,7 +65,7 @@ public class AnalisadorSintatico {
                 } else {
                     return AnaliseSintatica_ComErros; //Encerra o programa  	
                 }
-            } else if ((topPilha >= 46) && (topPilha <= 75)) { //Senão (* X é não-terminal*)
+            } else if ((topPilha >= 52) && (topPilha <= 87)) { //Senão (* X é não-terminal*)
                 TabelaParsing tabelaParsing = new TabelaParsing();
                 Integer regra = tabelaParsing.regra(topPilha, simboloEntrada);
                 if (regra != 0) { //Se M(X,a) <> ∅ então (existe uma regra)
@@ -82,7 +82,7 @@ public class AnalisadorSintatico {
                     return AnaliseSintatica_ComErros; //Encerra o programa  	
                 }
             }
-        } while (topPilha != 44);
+        } while (topPilha != 52);
         return AnaliseSintatica_Fim;
     }
 }

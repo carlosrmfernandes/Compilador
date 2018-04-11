@@ -121,90 +121,59 @@ public class Gramatica {
         listRegras.put(13, new String[]{"55", "39", "61", "47", "60"});
         listRegras.put(14, new String[]{"8"});
         listRegras.put(15, new String[]{"9", "34", "26", "50", "26", "35", "10", "8"});
-        listRegras.put(16, new String[]{"5", "25", "63", "47", "53", "47","62"});
-        listRegras.put(17, new String[]{"", "", "", "", "", ""});
-        listRegras.put(18, new String[]{"", "", "", "", "", ""});
-        listRegras.put(19, new String[]{"", "", "", "", "", ""});
-        listRegras.put(20, new String[]{"", "", "", "", "", ""});
-        listRegras.put(21, new String[]{"", "", "", "", "", ""});
-        listRegras.put(22, new String[]{"", "", "", "", "", ""});
-        listRegras.put(23, new String[]{"", "", "", "", "", ""});
-        listRegras.put(24, new String[]{"", "", "", "", "", ""});
-        listRegras.put(25, new String[]{"", "", "", "", "", ""});
-        listRegras.put(26, new String[]{"", "", "", "", "", ""});
-        listRegras.put(27, new String[]{"", "", "", "", "", ""});
-        listRegras.put(28, new String[]{"", "", "", "", "", ""});
-        listRegras.put(29, new String[]{"", "", "", "", "", ""});
-        listRegras.put(30, new String[]{"", "", "", "", "", ""});
-        listRegras.put(31, new String[]{"", "", "", "", "", ""});
-        listRegras.put(32, new String[]{"", "", "", "", "", ""});
-        listRegras.put(33, new String[]{"", "", "", "", "", ""});
-        listRegras.put(34, new String[]{"", "", "", "", "", ""});
-        listRegras.put(35, new String[]{"", "", "", "", "", ""});
-        listRegras.put(36, new String[]{"", "", "", "", "", ""});
-        listRegras.put(37, new String[]{"", "", "", "", "", ""});
-        listRegras.put(38, new String[]{"", "", "", "", "", ""});
-        listRegras.put(39, new String[]{"", "", "", "", "", ""});
-        listRegras.put(40, new String[]{"", "", "", "", "", ""});
-        listRegras.put(41, new String[]{"", "", "", "", "", ""});
-        listRegras.put(42, new String[]{"", "", "", "", "", ""});
-        listRegras.put(43, new String[]{"", "", "", "", "", ""});
-        listRegras.put(44, new String[]{"", "", "", "", "", ""});
-        listRegras.put(45, new String[]{"", "", "", "", "", ""});
-        listRegras.put(46, new String[]{"", "", "", "", "", ""});
-        listRegras.put(47, new String[]{"", "", "", "", "", ""});
-        listRegras.put(48, new String[]{"", "", "", "", "", ""});
-        listRegras.put(49, new String[]{"", "", "", "", "", ""});
-        listRegras.put(50, new String[]{"", "", "", "", "", ""});
+        listRegras.put(16, new String[]{"5", "25", "63", "47", "53", "47", "62"});
+        listRegras.put(17, new String[]{"36", "55", "39", "8", "37"});
+        listRegras.put(18, new String[]{"6", "66", "65", "7"});
+        listRegras.put(19, new String[]{"47", "66", "65"});
+        listRegras.put(20, new String[]{"64"});
+        listRegras.put(21, new String[]{"11", "25", "69"});
+        listRegras.put(22, new String[]{"12", "25"});
+        listRegras.put(23, new String[]{"13", "77", "14", "66", "71"});
+        listRegras.put(24, new String[]{"16", "77", "17", "66"});
+        listRegras.put(25, new String[]{"18", "66", "19", "77"});
+        listRegras.put(26, new String[]{"20", "36", "72", "74", "37"});
+        listRegras.put(27, new String[]{"21", "36", "75", "76", "37"});
+        listRegras.put(28, new String[]{"25", "67"});
+        listRegras.put(29, new String[]{"27", "25", "38", "77", "28", "77", "17", "66"});
+        listRegras.put(30, new String[]{"29", "77", "10", "84", "7"});
+        listRegras.put(31, new String[]{"68", "38", "77"});
+        listRegras.put(32, new String[]{"68", "38", "77"});
+        listRegras.put(33, new String[]{"39", "66"});
+        listRegras.put(34, new String[]{"34", "77", "35"});
+        listRegras.put(35, new String[]{"36", "77", "70", "37"});
+        listRegras.put(36, new String[]{"46", "77", "70"});
+        listRegras.put(37, new String[]{"15", "66"});
+        listRegras.put(38, new String[]{"25", "73"});
+        listRegras.put(39, new String[]{"34", "77", "35"});
+        listRegras.put(40, new String[]{"46", "72", "74"});
+        listRegras.put(41, new String[]{"77"});
+        listRegras.put(42, new String[]{"77"});
+        listRegras.put(43, new String[]{"77"});
+        listRegras.put(44, new String[]{"77"});
+        listRegras.put(45, new String[]{"77"});
+        listRegras.put(46, new String[]{"77"});
+        listRegras.put(47, new String[]{"48"});
+        listRegras.put(48, new String[]{"46", "75", "76"});
+        listRegras.put(49, new String[]{"79", "78"});
+        listRegras.put(50, new String[]{"79", "78"});
+        listRegras.put(51, new String[]{"79", "78"});
+        listRegras.put(52, new String[]{"79", "78"});
+        listRegras.put(53, new String[]{"79", "78"});
+        listRegras.put(54, new String[]{"79", "78"});
+        listRegras.put(55, new String[]{"40", "79"});
+        listRegras.put(56, new String[]{"41", "79"});
+        listRegras.put(57, new String[]{"42", "79"});
+        listRegras.put(58, new String[]{"43", "79"});
+        listRegras.put(59, new String[]{"", "", "", "", "", ""});
+        listRegras.put(60, new String[]{"", "", "", "", "", ""});
+        listRegras.put(61, new String[]{"", "", "", "", "", ""});
+        listRegras.put(62, new String[]{"", "", "", "", "", ""});
+        listRegras.put(63, new String[]{"", "", "", "", "", ""});
+        listRegras.put(64, new String[]{"", "", "", "", "", ""});
     }
 
-//<item derivacao="(|LID|:|INTEGER|)" codigo="63,36"/>
-//<item derivacao="BEGIN|COMANDO|REPCOMANDO|END" codigo="64,6"/>
-//<item derivacao=";|COMANDO|REPCOMANDO" codigo="65,47"/>
-//<item derivacao="CORPO" codigo="66,6"/>
-//<item derivacao="CALL|IDENTIFICADOR|PARAMETROS" codigo="66,11"/>
-//<item derivacao="GOTO|IDENTIFICADOR" codigo="66,12"/>
-//<item derivacao="IF|EXPRESSAO|THEN|COMANDO|ELSEPARTE" codigo="66,13"/>
-//<item derivacao="WHILE|EXPRESSAO|DO|COMANDO" codigo="66,16"/>
-//<item derivacao="REPEAT|COMANDO|UNTIL|EXPRESSAO" codigo="66,18"/>
-//<item derivacao="READLN|(|VARIAVEL|REPVARIAVEL|)" codigo="66,20"/>
-//<item derivacao="WRITELN|(|ITEMSAIDA|REPITEM|)" codigo="66,21"/>
-//<item derivacao="IDENTIFICADOR|RCOMID" codigo="66,25"/>
-//<item derivacao="FOR|IDENTIFICADOR|:=|EXPRESSAO|TO|EXPRESSAO|DO|COMANDO" codigo="66,27"/>
-//<item derivacao="CASE|EXPRESSAO|OF|CONDCASE|END" codigo="66,29"/>
-//<item derivacao="RVAR|:=|EXPRESSAO" codigo="67,34"/>
-//<item derivacao="RVAR|:=|EXPRESSAO" codigo="67,38"/>
-//<item derivacao=":|COMANDO" codigo="67,39"/>
-//<item derivacao="[|EXPRESSAO|]" codigo="68,34"/>
-//<item derivacao="(|EXPRESSAO|REPPAR|)" codigo="69,36"/>
-//<item derivacao=",|EXPRESSAO|REPPAR" codigo="70,46"/>
-//<item derivacao="ELSE|COMANDO" codigo="71,15"/>
-//<item derivacao="IDENTIFICADOR|VARIAVEL1" codigo="72,25"/>
-//<item derivacao="[|EXPRESSAO|]" codigo="73,34"/>
-//<item derivacao=",|VARIAVEL|REPVARIAVEL" codigo="74,46"/>
-//<item derivacao="EXPRESSAO" codigo="75,24"/>
-//<item derivacao="EXPRESSAO" codigo="75,25"/>
-//<item derivacao="EXPRESSAO" codigo="75,26"/>
-//<item derivacao="EXPRESSAO" codigo="75,30"/>
-//<item derivacao="EXPRESSAO" codigo="75,31"/>
-//<item derivacao="EXPRESSAO" codigo="75,36"/>
-//<item derivacao="LITERAL" codigo="75,48"/>
-//<item derivacao=",|ITEMSAIDA|REPITEM" codigo="76,46"/>
-//<item derivacao="EXPSIMP|REPEXPSIMP" codigo="77,24"/>
-//<item derivacao="EXPSIMP|REPEXPSIMP" codigo="77,25"/>
-//<item derivacao="EXPSIMP|REPEXPSIMP" codigo="77,26"/>
-//<item derivacao="EXPSIMP|REPEXPSIMP" codigo="77,30"/>
-//<item derivacao="EXPSIMP|REPEXPSIMP" codigo="77,31"/>
-//<item derivacao="EXPSIMP|REPEXPSIMP" codigo="77,36"/>
-//<item derivacao="=|EXPSIMP" codigo="78,40"/>
-//<item derivacao=">|EXPSIMP" codigo="78,41"/>
-//<item derivacao=">=|EXPSIMP" codigo="78,42"/>
-//<item derivacao="<|EXPSIMP" codigo="78,43"/>
-//<!-- Sinal de menor --
 //<item derivacao="<=|EXPSIMP" codigo="78,44"/>
-//<!-- Sinal de menor ou igual -->
 //<item derivacao="<>|EXPSIMP" codigo="78,45"/>
-//<!-- Sinal de diferente -->
 //<item derivacao="TERMO|REPEXP" codigo="79,24"/>
 //<item derivacao="TERMO|REPEXP" codigo="79,25"/>
 //<item derivacao="TERMO|REPEXP" codigo="79,26"/>
