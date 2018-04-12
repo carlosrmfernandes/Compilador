@@ -266,7 +266,7 @@ public class ControllerClassifica {
             //System.out.println(paToken);
         }
         //quando sair do ciclo e final de arquivo 
-        setLista("$", contadorDelinha);
+        //setLista("$", contadorDelinha);
         ui.getListaMunuAtt(listaToken);
         return listaToken;
 

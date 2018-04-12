@@ -3,7 +3,6 @@ package Sintatico;
 import Models.Token;
 import Models.Lista;
 import java.util.LinkedList;
-import java.util.List;
 
 public class AnalisadorSintatico {
 
@@ -22,8 +21,8 @@ public class AnalisadorSintatico {
     }    
     
     public AnalisadorSintatico() {
-        pilha.addFirst(51);
-        System.out.println("Insiriu na pilha a regra numero: 44");
+        pilha.addFirst(52);
+        System.out.println("Insiriu na pilha a regra numero: 52");
         pilha.addFirst(52); 
         System.out.println("Insiriu na pilha a regra numero: 46\n\n");
         
