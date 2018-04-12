@@ -107,83 +107,83 @@ public class TabelaParsing {
         tabParsing[53][4] = 4;
         tabParsing[53][5] = 5;
         tabParsing[53][6] = 6;
-//        tabParsing[][] = 7;
-//        tabParsing[][] = 8;
-//        tabParsing[][] = 9;
-//        tabParsing[][] = 10;
-//        tabParsing[][] = 11;
-//        tabParsing[][] = 12;
-//        tabParsing[][] = 13;
-//        tabParsing[][] = 14;
-//        tabParsing[][] = 15;
-//        tabParsing[][] = 16;
-//        tabParsing[][] = 17;
-//        tabParsing[][] = 18;
-//        tabParsing[][] = 19;
-//        tabParsing[][] = 20;
-//        tabParsing[][] = 21;
-//        tabParsing[][] = 22;
-//        tabParsing[][] = 23;
-//        tabParsing[][] = 24;
-//        tabParsing[][] = 25;
-//        tabParsing[][] = 26;
-//        tabParsing[][] = 27;
-//        tabParsing[][] = 28;
-//        tabParsing[][] = 29;
-//        tabParsing[][] = 30;
-//        tabParsing[][] = 31;
-//        tabParsing[][] = 32;
-//        tabParsing[][] = 33;
-//        tabParsing[][] = 34;
-//        tabParsing[][] = 35;
-//        tabParsing[][] = 36;
-//        tabParsing[][] = 37;
-//        tabParsing[][] = 38;
-//        tabParsing[][] = 39;
-//        tabParsing[][] = 40;
-//        tabParsing[][] = 41;
-//        tabParsing[][] = 42;
-//        tabParsing[][] = 43;
-//        tabParsing[][] = 44;
-//        tabParsing[][] = 45;
-//        tabParsing[][] = 46;
-//        tabParsing[][] = 47;
-//        tabParsing[][] = 48;
-//        tabParsing[][] = 49;
-//        tabParsing[][] = 50;
-//        tabParsing[][] = 51;
-//        tabParsing[][] = 52;
-//        tabParsing[][] = 53;
-//        tabParsing[][] = 54;
-//        tabParsing[][] = 55;
-//        tabParsing[][] = 56;
-//        tabParsing[][] = 57;
-//        tabParsing[][] = 58;
-//        tabParsing[][] = 59;
-//        tabParsing[][] = 60;
-//        tabParsing[][] = 61;
-//        tabParsing[][] = 62;
-//        tabParsing[][] = 63;
-//        tabParsing[][] =64;
-//        tabParsing[][] = 65;
-//        tabParsing[][] =66;
-//        tabParsing[][] =67;
-//        tabParsing[][] = 68;
-//        tabParsing[][] = 69;
-//        tabParsing[][] = 70;
-//        tabParsing[][] = 71;
-//        tabParsing[][] = 72;
-//        tabParsing[][] = 73;
-//        tabParsing[][] = 74;
-//        tabParsing[][] = 75;
-//        tabParsing[][] = 76;
-//        tabParsing[][] = 77;
-//        tabParsing[][] = 78;
-//        tabParsing[][] = 79;
-//        tabParsing[][] = 80;
-//        tabParsing[][] = 81;
-//        tabParsing[][] = 82;
-//        tabParsing[][] = 83;
+        tabParsing[54][2] = 7;
+        tabParsing[55][25] = 8;
+        tabParsing[56][46] = 9;
+        tabParsing[57][3] = 10;
+        tabParsing[58][25] = 11;
+        tabParsing[59][4] = 12;
+        tabParsing[60][25] = 13;
+        tabParsing[61][8] = 14;
+        tabParsing[61][9] = 15;
+        tabParsing[62][5] = 16;
+        tabParsing[63][36] = 17;
+        tabParsing[64][6] = 18;
+        tabParsing[65][47] = 19;
+        tabParsing[66][6] = 20;
+        tabParsing[66][11] = 21;
+        tabParsing[66][12] = 22;
+        tabParsing[66][13] = 23;
+        tabParsing[66][16] = 24;
+        tabParsing[66][18] = 25;
+        tabParsing[66][20] = 26;
+        tabParsing[66][21] = 27;
+        tabParsing[66][25] = 28;
+        tabParsing[66][27] = 29;
+        tabParsing[66][29] = 30;
+        tabParsing[67][34] = 31;
+        tabParsing[67][38] = 32;
+        tabParsing[67][39] = 33;
+        tabParsing[68][34] = 34;
+        tabParsing[69][36] = 35;
+        tabParsing[70][46] = 36;
+        tabParsing[71][15] = 37;
+        tabParsing[72][25] = 38;
+        tabParsing[73][34] = 39;
+        tabParsing[74][46] = 40;
+        tabParsing[75][24] = 41;
+        tabParsing[75][25] = 42;
+        tabParsing[75][26] = 43;
+        tabParsing[75][30] = 44;
+        tabParsing[75][31] = 45;
+        tabParsing[75][36] = 46;
+        tabParsing[75][48] = 47;
+        tabParsing[76][46] = 48;
+        tabParsing[77][24] = 49;
+        tabParsing[77][25] = 50;
+        tabParsing[77][26] = 51;
+        tabParsing[77][30] = 52;
+        tabParsing[77][31] = 53;
+        tabParsing[77][36] = 54;
+        tabParsing[78][40] = 55;
+        tabParsing[78][41] = 56;
+        tabParsing[78][42] = 57;
+        tabParsing[78][43] = 58;
+        tabParsing[78][44] = 59;
+        tabParsing[78][45] = 60;
+        tabParsing[79][24] = 61;
+        tabParsing[79][25] = 62;
+        tabParsing[79][26] = 63;
+        tabParsing[79][30] =64;
+        tabParsing[79][31] = 65;
+        tabParsing[79][36] =66;
+        tabParsing[80][22] =67;
+        tabParsing[80][30] = 68;
+        tabParsing[80][31] = 69;
+        tabParsing[81][24] = 70;
+        tabParsing[81][25] = 71;
+        tabParsing[81][26] = 72;
+        tabParsing[81][36] = 73;
+        tabParsing[82][23] = 74;
+        tabParsing[82][32] = 75;
+        tabParsing[82][33] = 76;
+        tabParsing[83][24] = 77;
+        tabParsing[83][25] = 78;
+        tabParsing[83][26] = 79;
+        tabParsing[83][36] = 80;
+        tabParsing[84][26] = 81;
+        tabParsing[85][47] = 82;
+        tabParsing[86][46] = 83;
 
     }
 
@@ -192,87 +192,3 @@ public class TabelaParsing {
         return pos;
     }
 }
-
-//<item derivacao="PROGRAM|IDENTIFICADOR|;|BLOCO|." codigo="52,1"/>
-//<item derivacao="DCLROT|DCLCONST|DCLVAR|DCLPROC|CORPO" codigo="53,2"/>
-//<item derivacao="DCLROT|DCLCONST|DCLVAR|DCLPROC|CORPO" codigo="53,3"/>
-//<item derivacao="DCLROT|DCLCONST|DCLVAR|DCLPROC|CORPO" codigo="53,4"/>
-//<item derivacao="DCLROT|DCLCONST|DCLVAR|DCLPROC|CORPO" codigo="53,5"/>
-//<item derivacao="DCLROT|DCLCONST|DCLVAR|DCLPROC|CORPO" codigo="53,6"/>
-//<item derivacao="LABEL|LID|;" codigo="54,2"/>
-//<item derivacao="IDENTIFICADOR|REPIDENT" codigo="55,25"/>
-//<item derivacao=",|IDENTIFICADOR|REPIDENT" codigo="56,46"/>
-//<item derivacao="CONST|IDENTIFICADOR|=|INTEIRO|;|LDCONST" codigo="57,3"/>
-//<item derivacao="IDENTIFICADOR|=|INTEIRO|;|LDCONST" codigo="58,25"/>
-//<item derivacao="VAR|LID|:|TIPO|;|LDVAR" codigo="59,4"/>
-//<item derivacao="LID|:|TIPO|;|LDVAR" codigo="60,25"/>
-//<item derivacao="INTEGER" codigo="61,8"/>
-//<item derivacao="ARRAY|[|INTEIRO|..|INTEIRO|]|OF|INTEGER" codigo="61,9"/>
-//<item derivacao="PROCEDURE|IDENTIFICADOR|DEFPAR|;|BLOCO|;|DCLPROC" codigo="62,5"/>
-//<item derivacao="(|LID|:|INTEGER|)" codigo="63,36"/>
-//<item derivacao="BEGIN|COMANDO|REPCOMANDO|END" codigo="64,6"/>
-//<item derivacao=";|COMANDO|REPCOMANDO" codigo="65,47"/>
-//<item derivacao="CORPO" codigo="66,6"/>
-//<item derivacao="CALL|IDENTIFICADOR|PARAMETROS" codigo="66,11"/>
-//<item derivacao="GOTO|IDENTIFICADOR" codigo="66,12"/>
-//<item derivacao="IF|EXPRESSAO|THEN|COMANDO|ELSEPARTE" codigo="66,13"/>
-//<item derivacao="WHILE|EXPRESSAO|DO|COMANDO" codigo="66,16"/>
-//<item derivacao="REPEAT|COMANDO|UNTIL|EXPRESSAO" codigo="66,18"/>
-//<item derivacao="READLN|(|VARIAVEL|REPVARIAVEL|)" codigo="66,20"/>
-//<item derivacao="WRITELN|(|ITEMSAIDA|REPITEM|)" codigo="66,21"/>
-//<item derivacao="IDENTIFICADOR|RCOMID" codigo="66,25"/>
-//<item derivacao="FOR|IDENTIFICADOR|:=|EXPRESSAO|TO|EXPRESSAO|DO|COMANDO" codigo="66,27"/>
-//<item derivacao="CASE|EXPRESSAO|OF|CONDCASE|END" codigo="66,29"/>
-//<item derivacao="RVAR|:=|EXPRESSAO" codigo="67,34"/>
-//<item derivacao="RVAR|:=|EXPRESSAO" codigo="67,38"/>
-//<item derivacao=":|COMANDO" codigo="67,39"/>
-//<item derivacao="[|EXPRESSAO|]" codigo="68,34"/>
-//<item derivacao="(|EXPRESSAO|REPPAR|)" codigo="69,36"/>
-//<item derivacao=",|EXPRESSAO|REPPAR" codigo="70,46"/>>
-//<item derivacao="ELSE|COMANDO" codigo="71,15"/>
-//<item derivacao="IDENTIFICADOR|VARIAVEL1" codigo="72,25"/>
-//<item derivacao="[|EXPRESSAO|]" codigo="73,34"/>
-//<item derivacao=",|VARIAVEL|REPVARIAVEL" codigo="74,46"/>
-//<item derivacao="EXPRESSAO" codigo="75,24"/>
-//<item derivacao="EXPRESSAO" codigo="75,25"/>
-//<item derivacao="EXPRESSAO" codigo="75,26"/>
-//<item derivacao="EXPRESSAO" codigo="75,30"/>
-//<item derivacao="EXPRESSAO" codigo="75,31"/>
-//<item derivacao="EXPRESSAO" codigo="75,36"/>
-//<item derivacao="LITERAL" codigo="75,48"/>
-//<item derivacao=",|ITEMSAIDA|REPITEM" codigo="76,46"/>
-//<item derivacao="EXPSIMP|REPEXPSIMP" codigo="77,24"/>
-//<item derivacao="EXPSIMP|REPEXPSIMP" codigo="77,25"/>
-//<item derivacao="EXPSIMP|REPEXPSIMP" codigo="77,26"/>
-//<item derivacao="EXPSIMP|REPEXPSIMP" codigo="77,30"/>
-//<item derivacao="EXPSIMP|REPEXPSIMP" codigo="77,31"/>
-//<item derivacao="EXPSIMP|REPEXPSIMP" codigo="77,36"/>
-//<item derivacao="=|EXPSIMP" codigo="78,40"/>
-//<item derivacao=">|EXPSIMP" codigo="78,41"/>
-//<item derivacao=">=|EXPSIMP" codigo="78,42"/>
-//<item derivacao="<|EXPSIMP" codigo="78,43"/>
-//<item derivacao="<=|EXPSIMP" codigo="78,44"/>
-//<item derivacao="<>|EXPSIMP" codigo="78,45"/>
-//<item derivacao="TERMO|REPEXP" codigo="79,24"/>
-//<item derivacao="TERMO|REPEXP" codigo="79,25"/>
-//<item derivacao="TERMO|REPEXP" codigo="79,26"/>
-//<item derivacao="+|TERMO|REPEXP" codigo="79,30"/>
-//<item derivacao="-|TERMO|REPEXP" codigo="79,31"/>
-//<item derivacao="TERMO|REPEXP" codigo="79,36"/>
-//<item derivacao="OR|TERMO|REPEXP" codigo="80,22"/>
-//<item derivacao="+|TERMO|REPEXP" codigo="80,30"/>
-//<item derivacao="-|TERMO|REPEXP" codigo="80,31"/>
-//<item derivacao="FATOR|REPTERMO" codigo="81,24"/>
-//<item derivacao="FATOR|REPTERMO" codigo="81,25"/>
-//<item derivacao="FATOR|REPTERMO" codigo="81,26"/>
-//<item derivacao="FATOR|REPTERMO" codigo="81,36"/>
-//<item derivacao="AND|FATOR|REPTERMO" codigo="82,23"/>
-//<item derivacao="*|FATOR|REPTERMO" codigo="82,32"/>
-//<item derivacao="/|FATOR|REPTERMO" codigo="82,33"/>
-//<item derivacao="NOT|FATOR" codigo="83,24"/>
-//<item derivacao="VARIAVEL" codigo="83,25"/>
-//<item derivacao="INTEIRO" codigo="83,26"/>
-//<item derivacao="(|EXPRESSAO|)" codigo="83,36"/>
-//<item derivacao="INTEIRO|RPINTEIRO|:|COMANDO|CONTCASE" codigo="84,26"/>
-//<item derivacao=";|CONDCASE" codigo="85,47"/>
-//<item derivacao=",|INTEIRO|RPINTEIRO" codigo="86,46"/>
