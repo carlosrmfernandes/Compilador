@@ -63,7 +63,6 @@ public class UserInterface extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Spear");
-        setBackground(java.awt.SystemColor.activeCaption);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Limpar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -86,24 +85,20 @@ public class UserInterface extends javax.swing.JFrame {
 
         Area_Texto.setColumns(20);
         Area_Texto.setRows(5);
-        Area_Texto.setText("#***Integrantes***"
+        Area_Texto.setText("\n#***Integrantes***"
             + "\n        #Carlos Fernandes"
             + "\n        #Clayton de Andrade"
             + "\nprogram TESTE;"
             + "\n   var x,_y,z : integer;"
-            + "\nbegin"
+            + "\nbegin;\n"
+            + "\nwriteln('Digite o primeiro Valor');"
             + "\n   readln(x);"
+            + "\nwriteln('Digite o segundo Valor');"
             + "\n   readln(_y);"
-            + "\n   x:=1000;"
-            + "\n   z:=[( x * _y ) + 15 * x ];"
-            + "\n   writeln('O resultado esta ok');"
-            + "\nend;"
-            + "\nprocedure _ExecutaTexte(integer i, array s)"
-            + "\n   begin"
-            + "\nif( i >= 150 or s = 'TEXTE' ) and i > 200 ) then"
-            + "\n   begin"
-            + "\n   writeln('passou no teste')"
-            + "\nend;");
+            + "\n   x:=_y+z;"
+            + "\nwriteln('Resultado e : ',x);"
+            + "\n   if(x<>y)then"
+            + "\n end.");
         jScrollPane2.setViewportView(Area_Texto);
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 480, 200));
@@ -213,8 +208,7 @@ public class UserInterface extends javax.swing.JFrame {
         String texto = String.valueOf(Area_Texto.getText());
         ControllerClassifica cc = new ControllerClassifica();
         listaToken = cc.getPalavra(texto);
-        
-        
+
         AnalisadorSintatico Sintatico = new AnalisadorSintatico();
         if (Sintatico.Analisar(listaToken) == AnalisadorSintatico.AnaliseSintatica_ComErros) {
             JOptionPane.showMessageDialog(null, Sintatico.returnErro());
@@ -304,24 +298,20 @@ public class UserInterface extends javax.swing.JFrame {
         int reply = JOptionPane.showConfirmDialog(null, message, title, JOptionPane.YES_NO_OPTION);
         if (reply == JOptionPane.YES_OPTION) {
             Area_Texto.setText("");
-            Area_Texto.setText("#***Integrantes***"
+            Area_Texto.setText("\n#***Integrantes***"
                     + "\n        #Carlos Fernandes"
                     + "\n        #Clayton de Andrade"
                     + "\nprogram TESTE;"
                     + "\n   var x,_y,z : integer;"
-                    + "\nbegin"
+                    + "\nbegin;\n"
+                    + "\nwriteln('Digite o primeiro Valor');"
                     + "\n   readln(x);"
+                    + "\nwriteln('Digite o segundo Valor');"
                     + "\n   readln(_y);"
-                    + "\n   x:=1000;"
-                    + "\n   z:=[( x * _y ) + 15 * x ];"
-                    + "\n   writeln('O resultado esta ok');"
-                    + "\nend;"
-                    + "\nprocedure _ExecutaTexte(integer i, array s)"
-                    + "\n   begin"
-                    + "\nif( i >= 150 or s = 'TEXTE' ) and i > 200 ) then"
-                    + "\n   begin"
-                    + "\n   writeln('passou no teste')"
-                    + "\nend;");
+                    + "\n   x:=_y+z;"
+                    + "\nwriteln('Resultado e : ',x);"
+                    + "\n   if(x<>y)then"
+                    + "\n end.");
         }
 
     }
