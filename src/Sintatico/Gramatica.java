@@ -198,6 +198,8 @@ public class Gramatica {
         listRegras.put(188, new String[]{"47", "84"});
         listRegras.put(189, new String[]{"0"});
         listRegras.put(190, new String[]{"46", "26", "86"});
+        listRegras.put(191, new String[]{"0"});
+        
     }
 
     public String[] getGramatica(int regra) {
