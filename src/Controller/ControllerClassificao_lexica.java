@@ -3,6 +3,59 @@
  * @author Carlos Fernandes
  * @author Clayton Andrade
  *
+ * program testeproc1;
+var x,y,z:integer;
+procedure p;
+var a:integer;
+begin
+readln(a);
+if(a<>x)then
+z:=z+x;
+else;
+begin;
+z:=z-x;
+call p;
+end;
+end;
+begin
+z:=0;
+readln(x);
+if(x>y) then
+call p
+else
+z:=z+x+y
+writeln(z);
+end.
+* 
+* 
+* // Programa certo 
+* 
+    program testeproc1;
+var 
+      x,y,z:integer;
+procedure p;
+var 
+     a:integer;
+begin
+  readln(a);
+  if(a<>x)then
+      z:=z+x;
+  begin;
+      z:=z-x;
+  call p;
+end;
+end;
+  begin
+    z:=z;
+    readln(x);
+  if(x>y) then
+    call p
+  else
+    z:=z+x+y;
+  writeln(x);
+end.
+* 
+* 
  */
 package Controller;
 
@@ -11,7 +64,7 @@ import Models.Token;
 import Interface.UserInterface;
 import javax.swing.JOptionPane;
 
-public class ControllerClassifica {
+public class ControllerClassificao_lexica {
 
     Token token = new Token();
     Lista listaToken = new Lista();
