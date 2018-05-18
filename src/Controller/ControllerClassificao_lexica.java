@@ -85,7 +85,7 @@ public class ControllerClassificao_lexica {
                             if (String.valueOf(caracter).matches("[-0-9]")) {
                                 boolean num = false;
                                 // se for numero verifica 
-                                while (String.valueOf(caracter).matches("[-0-9a-zA-Z_.]")) {
+                                while (String.valueOf(caracter).matches("[-0-9a-zA-Z_]")) {
 
                                     caracter = texto.charAt(i);
                                     paToken += String.valueOf(caracter);
@@ -179,6 +179,19 @@ public class ControllerClassificao_lexica {
 
                                                         i = j;
                                                     }
+                                                }
+                                                setLista(paToken, contadorDelinha);
+                                                paToken = "";
+
+                                            } else if (String.valueOf(caracter).matches(".")) {
+                                                paToken += String.valueOf(caracter);
+                                                char a;
+                                                int j = i + 1;
+                                                a = texto.charAt(j);
+                                                if (String.valueOf(a).matches("[.]")) {
+                                                    paToken += String.valueOf(a);
+
+                                                    i = j;
                                                 }
                                                 setLista(paToken, contadorDelinha);
                                                 paToken = "";
@@ -717,7 +730,7 @@ public class ControllerClassificao_lexica {
                 token.setNome(palavra);
                 token.setlinha(String.valueOf(linha));
                 break;
-           
+
             default:
 
                 if (verifacar_tamanho_do_Identificador(palavra)) {
