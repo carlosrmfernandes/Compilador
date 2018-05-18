@@ -105,6 +105,7 @@ public class AnalizadorLexico {
                                     paToken = "";
                                     i--;
                                 }
+
                             } else {
                                 // esse if e a definição de literal ' Texto'
                                 if (String.valueOf(caracter).matches("[']")) {
