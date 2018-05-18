@@ -3,14 +3,14 @@
  * @author Carlos Fernandes
  * @author Clayton Andrade
  */
-package Controller;
+package Lexico;
 
 import Models.Lista;
 import Models.Token;
 import Interface.UserInterface;
 import javax.swing.JOptionPane;
 
-public class ControllerClassificao_lexica {
+public class AnalizadorLexico {
 
     Token token = new Token();
     Lista listaToken = new Lista();
@@ -105,12 +105,6 @@ public class ControllerClassificao_lexica {
                                     paToken = "";
                                     i--;
                                 }
-
-//                                } else {
-//
-//                                    JOptionPane.showMessageDialog(null, "Erro de Lexico"+"\nLinha:"+contadorDelinha+"\nPalavra:"+paToken);
-//
-//                                }
                             } else {
                                 // esse if e a definição de literal ' Texto'
                                 if (String.valueOf(caracter).matches("[']")) {
@@ -183,22 +177,9 @@ public class ControllerClassificao_lexica {
                                                 setLista(paToken, contadorDelinha);
                                                 paToken = "";
 
-                                            } else if (String.valueOf(caracter).matches(".")) {
-                                                paToken += String.valueOf(caracter);
-                                                char a;
-                                                int j = i + 1;
-                                                a = texto.charAt(j);
-                                                if (String.valueOf(a).matches("[.]")) {
-                                                    paToken += String.valueOf(a);
-
-                                                    i = j;
-                                                }
-                                                setLista(paToken, contadorDelinha);
-                                                paToken = "";
-
                                             } else {
 
-                                                if (String.valueOf(caracter).matches("[\\[\\]=+;,*)(-/]")) {
+                                                if (String.valueOf(caracter).matches("[\\[\\]=+;,*)(-/].")) {
                                                     paToken += String.valueOf(caracter);
                                                     setLista(paToken, contadorDelinha);
                                                     paToken = "";
@@ -251,6 +232,19 @@ public class ControllerClassificao_lexica {
 
                                                             }
                                                         }
+
+                                                    } else if (String.valueOf(caracter).matches(".")) {
+                                                        paToken += String.valueOf(caracter);
+                                                        char a;
+                                                        int j = i + 1;
+                                                        a = texto.charAt(j);
+                                                        if (String.valueOf(a).matches("[.]")) {
+                                                            paToken += String.valueOf(a);
+
+                                                            i = j;
+                                                        }
+                                                        setLista(paToken, contadorDelinha);
+                                                        paToken = "";
 
                                                     } else {
                                                         //se nao cair em nenhum é um caracter invalido 

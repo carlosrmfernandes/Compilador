@@ -6,7 +6,7 @@
  */
 package Interface;
 
-import Controller.ControllerClassificao_lexica;
+import Lexico.AnalizadorLexico;
 import Models.Token;
 import Models.Lista;
 import java.io.BufferedReader;
@@ -206,7 +206,7 @@ public class UserInterface extends javax.swing.JFrame {
         listaToken.linpar();
         getListaMunuAtt(listaToken);
         String texto = String.valueOf(Area_Texto.getText());
-        ControllerClassificao_lexica cc = new ControllerClassificao_lexica();
+        AnalizadorLexico cc = new AnalizadorLexico();
         listaToken = cc.getPalavra(texto);
 
         AnalisadorSintatico Sintatico = new AnalisadorSintatico();

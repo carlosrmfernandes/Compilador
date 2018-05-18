@@ -2,7 +2,7 @@ package Sintatico;
 
 public class TabelaParsing {
 
-    private int tabParsing[][] = new int[193][49];
+    private int tabParsing[][] = new int[193][50];
 
     TabelaParsing() {
         tabParsing[52][1] = 1;
