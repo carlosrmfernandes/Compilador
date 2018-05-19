@@ -4,7 +4,7 @@
  * @author Clayton Andrade
  *
  */
-package Interface;
+package Visao;
 
 import Lexico.AnalizadorLexico;
 import Models.Token;
@@ -19,7 +19,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import Sintatico.AnalisadorSintatico;
 
-public class UserInterface extends javax.swing.JFrame {
+public class EditorCompilador extends javax.swing.JFrame {
 
     Token token = new Token();
     Lista listaToken = new Lista();
@@ -34,7 +34,7 @@ public class UserInterface extends javax.swing.JFrame {
 
     }
 
-    public UserInterface() {
+    public EditorCompilador() {
         initComponents();
         getListaMunuAtt(listaToken);
 
@@ -63,6 +63,7 @@ public class UserInterface extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Spear");
+        setBackground(java.awt.SystemColor.activeCaption);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Limpar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -85,20 +86,28 @@ public class UserInterface extends javax.swing.JFrame {
 
         Area_Texto.setColumns(20);
         Area_Texto.setRows(5);
-        Area_Texto.setText("\n#***Integrantes***"
-            + "\n        #Carlos Fernandes"
-            + "\n        #Clayton de Andrade"
-            + "\nprogram TESTE;"
-            + "\n   var x,_y,z : integer;"
-            + "\nbegin;\n"
-            + "\nwriteln('Digite o primeiro Valor');"
-            + "\n   readln(x);"
-            + "\nwriteln('Digite o segundo Valor');"
-            + "\n   readln(_y);"
-            + "\n   x:=_y+z;"
-            + "\nwriteln('Resultado e : ',x);"
-            + "\n   if(x<>y)then"
-            + "\n end.");
+        Area_Texto.setText(" program testeproc1;\n" +
+            "          var X, y, z :integer;\n" +
+            " procedure P; \n" +
+            "          var A :integer;\n" +
+            "              begin\n" +
+            "                  readln(a);\n" +
+            "                  if a=x then\n" +
+            "                      z:=z+x\n" +
+            "                  else begin\n" +
+            "            Z:=z+x;\n" +
+            "            call p;\n" +
+            "               end;\n" +
+            "                           end;\n" +
+            "        begin\n" +
+            "           Z:=0;\n" +
+            "           readln(x,y);\n" +
+            "             if x>y then\n" +
+            "                 call p\n" +
+            "             else\n" +
+            "           Z:=z+x+y;\n" +
+            "         writeln(z);\n" +
+            "end.\n ");
         jScrollPane2.setViewportView(Area_Texto);
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 480, 200));
@@ -298,20 +307,28 @@ public class UserInterface extends javax.swing.JFrame {
         int reply = JOptionPane.showConfirmDialog(null, message, title, JOptionPane.YES_NO_OPTION);
         if (reply == JOptionPane.YES_OPTION) {
             Area_Texto.setText("");
-            Area_Texto.setText("\n#***Integrantes***"
-                    + "\n        #Carlos Fernandes"
-                    + "\n        #Clayton de Andrade"
-                    + "\nprogram TESTE;"
-                    + "\n   var x,_y,z : integer;"
-                    + "\nbegin;\n"
-                    + "\nwriteln('Digite o primeiro Valor');"
-                    + "\n   readln(x);"
-                    + "\nwriteln('Digite o segundo Valor');"
-                    + "\n   readln(_y);"
-                    + "\n   x:=_y+z;"
-                    + "\nwriteln('Resultado e : ',x);"
-                    + "\n   if(x<>y)then"
-                    + "\n end.");
+            Area_Texto.setText(" program testeproc1;\n"
+                    + "          var X, y, z :integer;\n"
+                    + " procedure P; \n"
+                    + "          var A :integer;\n"
+                    + "              begin\n"
+                    + "                  readln(a);\n"
+                    + "                  if a=x then\n"
+                    + "                      z:=z+x\n"
+                    + "                  else begin\n"
+                    + "            Z:=z+x;\n"
+                    + "            call p;\n"
+                    + "               end;\n"
+                    + "                           end;\n"
+                    + "        begin\n"
+                    + "           Z:=0;\n"
+                    + "           readln(x,y);\n"
+                    + "             if x>y then\n"
+                    + "                 call p\n"
+                    + "             else\n"
+                    + "           Z:=z+x+y;\n"
+                    + "         writeln(z);\n"
+                    + "end. ");
         }
 
     }
@@ -342,7 +359,7 @@ public class UserInterface extends javax.swing.JFrame {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new UserInterface().setVisible(true);
+                new EditorCompilador().setVisible(true);
 
             }
         });

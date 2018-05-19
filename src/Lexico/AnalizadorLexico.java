@@ -7,14 +7,14 @@ package Lexico;
 
 import Models.Lista;
 import Models.Token;
-import Interface.UserInterface;
+import Visao.EditorCompilador;
 import javax.swing.JOptionPane;
 
 public class AnalizadorLexico {
 
     Token token = new Token();
     Lista listaToken = new Lista();
-    UserInterface ui = new UserInterface();
+    EditorCompilador ui = new EditorCompilador();
 
     /**
      * Para verificar se é uma variavél
