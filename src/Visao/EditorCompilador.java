@@ -78,7 +78,7 @@ public class EditorCompilador extends javax.swing.JFrame {
                 LimparActionPerformed(evt);
             }
         });
-        getContentPane().add(Limpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 110, 30));
+        getContentPane().add(Limpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 110, 30));
 
         Analisar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Analisar.setText("Analisar");
@@ -87,7 +87,7 @@ public class EditorCompilador extends javax.swing.JFrame {
                 AnalisarActionPerformed(evt);
             }
         });
-        getContentPane().add(Analisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 110, -1));
+        getContentPane().add(Analisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 110, 30));
 
         Area_Texto.setColumns(20);
         Area_Texto.setRows(5);
@@ -119,8 +119,8 @@ public class EditorCompilador extends javax.swing.JFrame {
 
         Nome_Programa.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         Nome_Programa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Nome_Programa.setText("Analisador Léxico");
-        getContentPane().add(Nome_Programa, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 20, 220, 20));
+        Nome_Programa.setText("Analisador CompAlg++");
+        getContentPane().add(Nome_Programa, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 280, 30));
 
         Table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
