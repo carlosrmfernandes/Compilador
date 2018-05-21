@@ -41,6 +41,7 @@ public class EditorCompilador extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         getListaMunuAtt(listaToken);
+        setResizable(false);
         Area_Texto.setForeground(Color.BLUE);
         Area_Texto.setFont(new Font("Consolas", Font.BOLD,12));
 
