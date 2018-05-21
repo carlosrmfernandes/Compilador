@@ -22,7 +22,7 @@ public class AnalisadorSintatico {
     
     public AnalisadorSintatico() {
         pilha.addFirst(52);
-        System.out.println("Insiriu na pilha a regra numero: 52");
+        //System.out.println("Insiriu na pilha a regra numero: 52");
        
         
     }
@@ -49,7 +49,7 @@ public class AnalisadorSintatico {
         simboloEntrada = sEntrada;
 
         do {
-            System.out.println("Simbolo Inicial: " +simboloEntrada + "\tTopo da Pilha:"+topPilha+ "\tPilha:"+pilha);
+            //System.out.println("Simbolo Inicial: " +simboloEntrada + "\tTopo da Pilha:"+topPilha+ "\tPilha:"+pilha);
             if (topPilha == 0) {
                 
                 pilha.removeFirst(); //Retire o elemento do topo da pilha

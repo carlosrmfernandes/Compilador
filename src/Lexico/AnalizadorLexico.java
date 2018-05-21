@@ -24,7 +24,7 @@ public class AnalizadorLexico {
         if (numero > -32767 && numero < 32767) {
             return true;
         } else {
-            JOptionPane.showMessageDialog(null, "O numero passou o seu limite ex: numero > -32767 && numero < 32767 ");
+            JOptionPane.showMessageDialog(null, "O numero passou o seu limite ex: numero > -32767 && numero < 32767 ","",JOptionPane.ERROR_MESSAGE);
             return false;
         }
     }
@@ -34,13 +34,13 @@ public class AnalizadorLexico {
         if (paToken.length() <= 30) {
             return true;
         } else {
-            JOptionPane.showMessageDialog(null, "O Idenficador passou o seu limite ex: Maximo de caracter 30 ");
+            JOptionPane.showMessageDialog(null, "O Idenficador passou o seu limite ex: Maximo de caracter 30 ","",JOptionPane.ERROR_MESSAGE);
             return false;
         }
     }
 
     public void erro(int contadorDelinha) {
-        JOptionPane.showMessageDialog(null, "erro lexico ouve uma interrupção erro na linha : " + contadorDelinha);
+        JOptionPane.showMessageDialog(null, "erro lexico ouve uma interrupção erro na linha : " + contadorDelinha,"",JOptionPane.ERROR_MESSAGE);
 
     }
 
@@ -58,7 +58,7 @@ public class AnalizadorLexico {
                     contadorDelinha++;
                 } else {
                     //esse if ignora os espaços
-                    if (String.valueOf(caracter).matches(" ")) {
+                    if (String.valueOf(caracter).matches(" ")||String.valueOf(caracter).matches("\t")) {
 
                     } else {
                         //^[a-zA-Z].*
@@ -223,7 +223,7 @@ public class AnalizadorLexico {
                                                                 contadorDelinha--;
                                                                 if (!aox) {
                                                                     setLista("Erro  comentario", contadorDelinha);
-                                                                    JOptionPane.showMessageDialog(null, "erro lexico Erro na Linha" + contadorDelinha);
+                                                                    JOptionPane.showMessageDialog(null, "erro lexico Erro na Linha" + contadorDelinha,"",JOptionPane.ERROR_MESSAGE);
 
                                                                     i = j;
                                                                     break;

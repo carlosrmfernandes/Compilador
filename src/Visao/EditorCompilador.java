@@ -18,6 +18,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import Sintatico.AnalisadorSintatico;
+import java.awt.Color;
 
 public class EditorCompilador extends javax.swing.JFrame {
 
@@ -36,6 +37,7 @@ public class EditorCompilador extends javax.swing.JFrame {
 
     public EditorCompilador() {
         initComponents();
+        setLocationRelativeTo(null);
         getListaMunuAtt(listaToken);
 
     }
@@ -52,6 +54,9 @@ public class EditorCompilador extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         Table = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLbResult = new javax.swing.JLabel();
+        jTfResultado = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         Abrir = new javax.swing.JCheckBoxMenuItem();
@@ -67,22 +72,22 @@ public class EditorCompilador extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Limpar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Limpar.setText("       Limpar");
+        Limpar.setText("Limpar");
         Limpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LimparActionPerformed(evt);
             }
         });
-        getContentPane().add(Limpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, 220, 70));
+        getContentPane().add(Limpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 110, 30));
 
         Analisar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Analisar.setText("      Analisar");
+        Analisar.setText("Analisar");
         Analisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AnalisarActionPerformed(evt);
             }
         });
-        getContentPane().add(Analisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 220, 70));
+        getContentPane().add(Analisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 110, -1));
 
         Area_Texto.setColumns(20);
         Area_Texto.setRows(5);
@@ -110,7 +115,7 @@ public class EditorCompilador extends javax.swing.JFrame {
             "end.\n ");
         jScrollPane2.setViewportView(Area_Texto);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 480, 200));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 480, 450));
 
         Nome_Programa.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         Nome_Programa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -144,8 +149,13 @@ public class EditorCompilador extends javax.swing.JFrame {
         jScrollPane1.setViewportView(Table);
         Table.getAccessibleContext().setAccessibleName("");
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 480, 160));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 50, 300, 450));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 260, 60));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 210, -1, 20));
+
+        jLbResult.setText("Resultado");
+        getContentPane().add(jLbResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 510, 80, 20));
+        getContentPane().add(jTfResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 506, 180, 30));
 
         jMenu1.setText("Arquivo");
 
@@ -220,14 +230,19 @@ public class EditorCompilador extends javax.swing.JFrame {
 
         AnalisadorSintatico Sintatico = new AnalisadorSintatico();
         if (Sintatico.Analisar(listaToken) == AnalisadorSintatico.AnaliseSintatica_ComErros) {
-            JOptionPane.showMessageDialog(null, Sintatico.returnErro());
+            jTfResultado.setForeground(Color.RED);
+            jTfResultado.setText("Erro!...");
+            JOptionPane.showMessageDialog(null, Sintatico.returnErro(),"",JOptionPane.ERROR_MESSAGE);
+        } else {
+            jTfResultado.setForeground(Color.GREEN);
+            jTfResultado.setText("Sucesso!...");
         }
 
         getListaMunuAtt(listaToken);
     }//GEN-LAST:event_AnalisarActionPerformed
 
     private void AbrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AbrirActionPerformed
-        // TODO add your handling code here:
+       
         String message = "Tem certeza? Essa ação vai limpar a Tela e a Tabela do Analisador.?";
         String title = "Confirmação";
         int reply = JOptionPane.showConfirmDialog(null, message, title, JOptionPane.YES_NO_OPTION);
@@ -256,12 +271,12 @@ public class EditorCompilador extends javax.swing.JFrame {
     }//GEN-LAST:event_SairActionPerformed
 
     private void SobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SobreActionPerformed
-        // TODO add your handling code here:        
+               
         MenssagemPercaDados();
     }//GEN-LAST:event_SobreActionPerformed
 
     private void SalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalvarActionPerformed
-        // TODO add your handling code here:
+       
         JFileChooser saveFile = new JFileChooser();
         saveFile.showSaveDialog(saveFile);
         resultadoJanelas = JFileChooser.OPEN_DIALOG;
@@ -273,7 +288,7 @@ public class EditorCompilador extends javax.swing.JFrame {
     }//GEN-LAST:event_SalvarActionPerformed
 
     public void getListaMunuAtt(Lista li) {
-        //Atualiza a grid
+        
         modeloTable = (DefaultTableModel) Table.getModel();
         while (modeloTable.getRowCount() > 0) {
             modeloTable.removeRow(0);
@@ -378,10 +393,13 @@ public class EditorCompilador extends javax.swing.JFrame {
     private javax.swing.JMenuItem Sobre;
     private javax.swing.JTable Table;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLbResult;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    public javax.swing.JTextField jTfResultado;
     // End of variables declaration//GEN-END:variables
 
 }
