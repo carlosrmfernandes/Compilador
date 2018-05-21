@@ -19,6 +19,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import Sintatico.AnalisadorSintatico;
 import java.awt.Color;
+import java.awt.Font;
 
 public class EditorCompilador extends javax.swing.JFrame {
 
@@ -36,9 +37,12 @@ public class EditorCompilador extends javax.swing.JFrame {
     }
 
     public EditorCompilador() {
+
         initComponents();
         setLocationRelativeTo(null);
         getListaMunuAtt(listaToken);
+        Area_Texto.setForeground(Color.BLUE);
+        Area_Texto.setFont(new Font("Consolas", Font.BOLD,12));
 
     }
 
@@ -232,7 +236,7 @@ public class EditorCompilador extends javax.swing.JFrame {
         if (Sintatico.Analisar(listaToken) == AnalisadorSintatico.AnaliseSintatica_ComErros) {
             jTfResultado.setForeground(Color.RED);
             jTfResultado.setText("Erro!...");
-            JOptionPane.showMessageDialog(null, Sintatico.returnErro(),"",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, Sintatico.returnErro(), "", JOptionPane.ERROR_MESSAGE);
         } else {
             jTfResultado.setForeground(Color.GREEN);
             jTfResultado.setText("Sucesso!...");
@@ -242,7 +246,7 @@ public class EditorCompilador extends javax.swing.JFrame {
     }//GEN-LAST:event_AnalisarActionPerformed
 
     private void AbrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AbrirActionPerformed
-       
+
         String message = "Tem certeza? Essa ação vai limpar a Tela e a Tabela do Analisador.?";
         String title = "Confirmação";
         int reply = JOptionPane.showConfirmDialog(null, message, title, JOptionPane.YES_NO_OPTION);
@@ -271,12 +275,12 @@ public class EditorCompilador extends javax.swing.JFrame {
     }//GEN-LAST:event_SairActionPerformed
 
     private void SobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SobreActionPerformed
-               
+
         MenssagemPercaDados();
     }//GEN-LAST:event_SobreActionPerformed
 
     private void SalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalvarActionPerformed
-       
+
         JFileChooser saveFile = new JFileChooser();
         saveFile.showSaveDialog(saveFile);
         resultadoJanelas = JFileChooser.OPEN_DIALOG;
@@ -288,7 +292,7 @@ public class EditorCompilador extends javax.swing.JFrame {
     }//GEN-LAST:event_SalvarActionPerformed
 
     public void getListaMunuAtt(Lista li) {
-        
+
         modeloTable = (DefaultTableModel) Table.getModel();
         while (modeloTable.getRowCount() > 0) {
             modeloTable.removeRow(0);
