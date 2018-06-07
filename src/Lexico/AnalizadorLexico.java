@@ -192,7 +192,7 @@ public class AnalizadorLexico {
                                                     //comentario de bloco ##   ##
                                                     //caracter == '[' || caracter == ']'
                                                     if (String.valueOf(caracter).matches("[#]")) {
-
+                                                        contadorDelinha++;
                                                         char a;
                                                         int j = i + 1;
                                                         a = texto.charAt(j);
@@ -217,7 +217,7 @@ public class AnalizadorLexico {
                                                                         }
                                                                     }
                                                                     if (String.valueOf(texto.charAt(j)).matches("[\n]")) {
-                                                                        contadorDelinha++;
+                                                                        //contadorDelinha++;
                                                                     }
                                                                 }
                                                                 contadorDelinha--;
