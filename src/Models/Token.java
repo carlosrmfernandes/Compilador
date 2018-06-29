@@ -4,7 +4,6 @@
  * @author Clayton Andrade
  *
  */
-
 package Models;
 
 public class Token {
@@ -45,6 +44,23 @@ public class Token {
 
     public void setlinha(String linha) {
         this.linha = linha;
+    }
+
+    public boolean isCategoria() {
+        return getCodigo().equals("1") || getCodigo().equals("5");
+    }
+
+    public boolean isIdentificador() {
+        return getCodigo().equals("25");
+    }
+
+    public boolean isTipo() {
+        return getCodigo().equals("8") || getCodigo().equals("8");
+    }
+
+    @Override
+    public String toString() {
+        return getCodigo() + "|" + getNome();
     }
 
 }
