@@ -46,15 +46,15 @@ public class Token {
         this.linha = linha;
     }
 
-    public boolean isCategoria() {
+    public boolean Categoria() {
         return getCodigo().equals("1") || getCodigo().equals("5");
     }
 
-    public boolean isIdentificador() {
+    public boolean Identificador() {
         return getCodigo().equals("25");
     }
 
-    public boolean isTipo() {
+    public boolean Tipo() {
         return getCodigo().equals("8") || getCodigo().equals("8");
     }
 

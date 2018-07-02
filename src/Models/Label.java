@@ -17,6 +17,6 @@ public class Label extends Identificador {
 
     @Override
     public String categoria() {
-        return "rotulo";
+        return "label";
     }
 }

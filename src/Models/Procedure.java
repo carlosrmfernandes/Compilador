@@ -10,5 +10,9 @@ package Models;
  * @author Polo UAB
  */
 public class Procedure {
+
+    public Procedure(Token pop, int nivel) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
