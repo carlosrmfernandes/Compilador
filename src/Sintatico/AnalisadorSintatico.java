@@ -2,7 +2,9 @@ package Sintatico;
 
 import Models.Token;
 import Models.Lista;
+import Semantica.Semantico;
 import java.util.LinkedList;
+import jdk.nashorn.internal.parser.TokenKind;
 
 public class AnalisadorSintatico {
 
@@ -15,6 +17,7 @@ public class AnalisadorSintatico {
     int nivel = -1;
     Integer topPilha;
     Integer simboloEntrada;
+    Semantico semantico = new Semantico();
 
     public String returnErro() {
         return "Erro Sintatico"
@@ -24,26 +27,55 @@ public class AnalisadorSintatico {
 
     public AnalisadorSintatico() {
         pilha.addFirst(52);
-        //System.out.println("Insiriu na pilha a regra numero: 52");
 
     }
 
-    public int nivel(Integer simboloEntrada, int inivel) {
+    public void nivelvalor(Integer simboloEntrada, final String nome) {
 
-        if (simboloEntrada.toString().matches("1|5|13|16|18")) {
-            nivel++;
+        switch (simboloEntrada) {
+            case 1:
+                nivel++;
+                semantico.setNivel(nivel);
+                //System.out.println(nivel);
+                break;
+            case 5:
+                nivel++;
+                semantico.setNivel(nivel);
+                //System.out.println(nivel);
+                break;
+            case 13:
+                nivel++;
+                semantico.setNivel(nivel);
+                //System.out.println(nivel);
+                break;
+            case 16:
+                nivel++;
+                semantico.setNivel(nivel);
+                // System.out.println(nivel);
+                break;
+            case 18:
+                nivel++;
+                semantico.setNivel(nivel);
+                //System.out.println(nivel);
+                break;
+            case 7:
+                nivel--;
+                //System.out.println(nivel);
+                break;
 
-        } else if (simboloEntrada.equals("7")) {
-            nivel--;
+            case 4:
+                System.out.println(nivel + " : " + nome);
+                //semantico.insere(nivel, nome);
+                break;
         }
-        return nivel;
+
     }
 
     public Integer Analisar(Lista tokens) {
         for (int i = 0; i < tokens.tamanho(); i++) {
             Token token = tokens.retorna(i);
-            int resu = Analisador(Integer.parseInt(token.getCodigo()));
-
+            int resu = Analisador(Integer.parseInt(token.getCodigo()), token.getNome());
+            System.out.println();
             if (resu == AnaliseSintatica_ComErros) {
                 linha = Integer.parseInt(token.getLinha());
                 nomeToken = token.getNome();
@@ -53,10 +85,10 @@ public class AnalisadorSintatico {
         return AnaliseSintatica_Fim;
     }
 
-    public Integer Analisador(Integer sEntrada) { //0 - fim , 1- sai sem erros 2-sai comerro
+    public Integer Analisador(Integer sEntrada, String nome) { //0 - fim , 1- sai sem erros 2-sai comerro
         topPilha = pilha.getFirst();
         simboloEntrada = sEntrada;
-        //System.out.println(nivel(simboloEntrada, nivel));
+        nivelvalor(simboloEntrada, nome);
 
         do {
 

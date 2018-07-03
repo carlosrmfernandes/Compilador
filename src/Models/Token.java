@@ -45,22 +45,4 @@ public class Token {
     public void setlinha(String linha) {
         this.linha = linha;
     }
-
-    public boolean Categoria() {
-        return getCodigo().equals("1") || getCodigo().equals("5");
-    }
-
-    public boolean Identificador() {
-        return getCodigo().equals("25");
-    }
-
-    public boolean Tipo() {
-        return getCodigo().equals("8") || getCodigo().equals("8");
-    }
-
-    @Override
-    public String toString() {
-        return getCodigo() + "|" + getNome();
-    }
-
 }
