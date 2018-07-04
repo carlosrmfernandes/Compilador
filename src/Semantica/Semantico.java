@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -25,22 +26,25 @@ public class Semantico {
 
     public void init() {
         niveis.put(getNivel(), new HashSet<String>());
-        
+
     }
 
     public void insere(int nivel, String var) {
         if (niveis.get(nivel).contains(var)) {
-            System.out.println("ERRO" + var);
+            // System.out.println("ERRO" + var);
+            JOptionPane.showMessageDialog(null, "Erro " + var);
         } else {
             niveis.get(nivel).add(var);
         }
     }
-     public int getNivel() {
+
+    public int getNivel() {
         return nivel;
     }
 
     public void setNivel(int nivel) {
         this.nivel = nivel;
+        init();
     }
 
 //    public void teste() {
@@ -57,6 +61,4 @@ public class Semantico {
 //    public static void main(String args[]) {
 //        new Semantico().teste();
 //    }
-
-   
 }

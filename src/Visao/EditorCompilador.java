@@ -9,6 +9,7 @@ package Visao;
 import Lexico.AnalizadorLexico;
 import Models.Token;
 import Models.Lista;
+import Semantica.AnalisadorSemanticoVariaveis;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -239,6 +240,7 @@ public class EditorCompilador extends javax.swing.JFrame {
             jTfResultado.setText("Erro!...");
             JOptionPane.showMessageDialog(null, Sintatico.returnErro(), "", JOptionPane.ERROR_MESSAGE);
         } else {
+            new AnalisadorSemanticoVariaveis(listaToken).analisar();
             jTfResultado.setForeground(Color.GREEN);
             jTfResultado.setText("Sucesso!...");
         }

@@ -3,7 +3,9 @@ package Sintatico;
 import Models.Token;
 import Models.Lista;
 import Semantica.Semantico;
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import jdk.nashorn.internal.parser.TokenKind;
 
 public class AnalisadorSintatico {
@@ -19,6 +21,8 @@ public class AnalisadorSintatico {
     Integer simboloEntrada;
     Semantico semantico = new Semantico();
 
+    List<String> variaveis = new ArrayList<String>();
+
     public String returnErro() {
         return "Erro Sintatico"
                 + "\nLinha: " + linha
@@ -30,46 +34,63 @@ public class AnalisadorSintatico {
 
     }
 
-    public void nivelvalor(Integer simboloEntrada, final String nome) {
+//    public void nivelvalor(Integer simboloEntrada, final String nome) {
+//
+//        switch (simboloEntrada) {
+//            case 1:
+//                nivel++;
+//                semantico.setNivel(nivel);
+//                //System.out.println(nivel);
+//                break;
+//            case 5:
+//                nivel++;
+//                semantico.setNivel(nivel);
+//                //System.out.println(nivel);
+//                break;
+//            case 13:
+//                nivel++;
+//                semantico.setNivel(nivel);
+//                //System.out.println(nivel);
+//                break;
+//            case 16:
+//                nivel++;
+//                semantico.setNivel(nivel);
+//                // System.out.println(nivel);
+//                break;
+//            case 18:
+//                nivel++;
+//                semantico.setNivel(nivel);
+//                //System.out.println(nivel);
+//                break;
+//            case 7:
+//                nivel--;
+//                //System.out.println(nivel);
+//                break;
+//
+//            case 4:
+//
+//                //System.out.println(nome);
+//                //System.out.println(nome);
+//                //System.out.println(nivel + " : " + nome);
+//                //semantico.insere(nivel, nome);
+//                break;
+//        }
+//        //System.out.println(simboloEntrada + " " + nome);
+//
+//    }
 
-        switch (simboloEntrada) {
-            case 1:
-                nivel++;
-                semantico.setNivel(nivel);
-                //System.out.println(nivel);
-                break;
-            case 5:
-                nivel++;
-                semantico.setNivel(nivel);
-                //System.out.println(nivel);
-                break;
-            case 13:
-                nivel++;
-                semantico.setNivel(nivel);
-                //System.out.println(nivel);
-                break;
-            case 16:
-                nivel++;
-                semantico.setNivel(nivel);
-                // System.out.println(nivel);
-                break;
-            case 18:
-                nivel++;
-                semantico.setNivel(nivel);
-                //System.out.println(nivel);
-                break;
-            case 7:
-                nivel--;
-                //System.out.println(nivel);
-                break;
-
-            case 4:
-                System.out.println(nivel + " : " + nome);
-                //semantico.insere(nivel, nome);
-                break;
-        }
-
-    }
+//    public void verificarVar() {
+//        for (Token token : listaDeTokens) {
+//            int codigo = simboloEntrada;
+//            if (codigo == 25) {
+//                System.out.println(token.getNome());
+//                //semantico.insere(nivel, token.getNome());
+//            } else if (codigo == 47) {
+//                break;
+//            }
+//            nivelvalor(simboloEntrada, nomeToken);
+//        }
+//    }
 
     public Integer Analisar(Lista tokens) {
         for (int i = 0; i < tokens.tamanho(); i++) {
@@ -88,7 +109,7 @@ public class AnalisadorSintatico {
     public Integer Analisador(Integer sEntrada, String nome) { //0 - fim , 1- sai sem erros 2-sai comerro
         topPilha = pilha.getFirst();
         simboloEntrada = sEntrada;
-        nivelvalor(simboloEntrada, nome);
+//        nivelvalor(simboloEntrada, nome);
 
         do {
 
