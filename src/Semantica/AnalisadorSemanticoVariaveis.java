@@ -31,14 +31,16 @@ public final class AnalisadorSemanticoVariaveis {
     }
 
     public void analisar() {
-        System.out.println("ok");
+
         while (!pilha.empty()) {
             Token token = pilha.pop();
+
             nivelvalor(token);
         }
     }
 
     public void nivelvalor(Token token) {
+
         if (isCategoria(token)) {
             nivel++;
             semantico.setNivel(nivel);
@@ -47,18 +49,12 @@ public final class AnalisadorSemanticoVariaveis {
         switch (Integer.parseInt(token.getCodigo())) {
             case 7:
                 nivel--;
-                //System.out.println(nivel);
                 break;
 
             case 4:
                 verificarVar();
                 break;
-            case 25:
-                //System.out.println(nome);
-                //System.out.println(nome);
-                //System.out.println(nivel + " : " + nome);
-                // semantico.insere(nivel, nome);
-                break;
+
         }
     }
 
@@ -67,7 +63,7 @@ public final class AnalisadorSemanticoVariaveis {
             Token token = pilha.pop();
             int codigo = converterParaInt(token.getCodigo());
             if (codigo == 25) {
-                // System.out.println(token.getNome());
+
                 semantico.insere(nivel, token.getNome());
             } else if (isCategoria(token) || codigo == 6) {
                 break;
@@ -77,7 +73,13 @@ public final class AnalisadorSemanticoVariaveis {
     }
 
     public boolean isCategoria(Token token) {
+        if (token.getCodigo().equals("5")) {
+            nivel++;
+            semantico.setNivel(nivel);
+
+        }
         return token.getCodigo().matches("1|5|13|16|18");
+
     }
 
     public int converterParaInt(String string) {

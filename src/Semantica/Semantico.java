@@ -30,9 +30,9 @@ public class Semantico {
     }
 
     public void insere(int nivel, String var) {
+        
         if (niveis.get(nivel).contains(var)) {
-            // System.out.println("ERRO" + var);
-            JOptionPane.showMessageDialog(null, "Erro " + var);
+            JOptionPane.showMessageDialog(null, "" + var + " Já Existe");
         } else {
             niveis.get(nivel).add(var);
         }
