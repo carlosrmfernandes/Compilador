@@ -55,17 +55,54 @@ public final class AnalisadorSemanticoVariaveis {
                 verificarVar();
                 break;
 
+            case 3:
+                //verificarConst();
+                break;
+
+            case 2:
+                verificarLabel();
+                break;
+
         }
     }
 
     public void verificarVar() {
         while (!pilha.empty()) {
             Token token = pilha.pop();
+            System.out.println(token.getNome());
             int codigo = converterParaInt(token.getCodigo());
             if (codigo == 25) {
-
+                System.out.println(token.getNome());
                 semantico.insere(nivel, token.getNome());
             } else if (isCategoria(token) || codigo == 6) {
+                break;
+            }
+            nivelvalor(token);
+        }
+    }
+
+    public void verificarConst() {
+
+        while (!pilha.empty()) {
+            Token token = pilha.pop();
+            int codigo = converterParaInt(token.getCodigo());
+            if (codigo == 25) {
+                semantico.insere(nivel, token.getNome());
+            } else if (isCategoria(token) || codigo == 4) {
+                break;
+            }
+            nivelvalor(token);
+        }
+    }
+
+    public void verificarLabel() {
+
+        while (!pilha.empty()) {
+            Token token = pilha.pop();
+            int codigo = converterParaInt(token.getCodigo());
+            if (codigo == 25) {
+                semantico.insere(nivel, token.getNome());
+            } else if (isCategoria(token) || codigo == 3) {
                 break;
             }
             nivelvalor(token);
