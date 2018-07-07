@@ -16,10 +16,10 @@ import java.util.Stack;
 public class AnalisadorSemanticoVariaveisNaodeClarada {
 
     private Lista listaDeTokens = new Lista();
-    private Stack<Token> pilha = new Stack<>();
-    private int contadorDeBegins = -1;
+    private Stack<Token> pilha2 = new Stack<>();
     private Semantico semantico = new Semantico();
     private int nivel = -1;
+    private Stack<String> palavra2 = new Stack<>();
 
     public AnalisadorSemanticoVariaveisNaodeClarada(Lista listaDeTokens) {
         iniciarPilha(listaDeTokens);
@@ -27,14 +27,14 @@ public class AnalisadorSemanticoVariaveisNaodeClarada {
 
     public void iniciarPilha(Lista lista) {
         for (int i = lista.getLista().size() - 1; i >= 0; i--) {
-            pilha.push(lista.getLista().get(i));
+            pilha2.push(lista.getLista().get(i));
         }
     }
 
-    public void analisar() {
-        System.out.println("ok");
-        while (!pilha.empty()) {
-            Token token = pilha.pop();
+    public void analisarr() {
+
+        while (!pilha2.empty()) {
+            Token token = pilha2.pop();
             nivelvalor(token);
         }
     }
@@ -46,53 +46,43 @@ public class AnalisadorSemanticoVariaveisNaodeClarada {
             return;
         }
         switch (Integer.parseInt(token.getCodigo())) {
-            case 7:
-                nivel--;
-                contadorDeBegins--;
-                //System.out.println(nivel);
-                break;
 
             case 6:
-                contadorDeBegins++;
-                verificarVar();
-                break;
-            case 25:
-                //System.out.println(nome);
-                //System.out.println(nome);
-                //System.out.println(nivel + " : " + nome);
-                // semantico.insere(nivel, nome);
+                verificarPro();
                 break;
         }
+
     }
 
-    public void verificarVar() {
-        while (!pilha.empty()) {
-            Token token = pilha.pop();
+    public void verificarPro() {
+        while (!pilha2.empty()) {
+            Token token = pilha2.pop();
             int codigo = converterParaInt(token.getCodigo());
             if (codigo == 25) {
-                // System.out.println(token.getNome());
-                semantico.insere(nivel, token.getNome());
-            } else if (codigo == 6) {
-                contadorDeBegins++;
+                palavra2.push(token.getNome());
+                
+                
             } else if (codigo == 7) {
-                contadorDeBegins--;
-                if (contadorDeBegins == 0) {
-                    break;
-                }
+                break;
             }
             nivelvalor(token);
+        }
+        for (int i = 0; i < palavra2.size(); i++) {
+            System.out.println("Nao " + palavra2.elementAt(i));
         }
     }
 
     public boolean isCategoria(Token token) {
+        if (token.getCodigo().equals("5")) {
+            nivel++;
+            semantico.setNivel(nivel);
+
+        }
         return token.getCodigo().matches("1|5|13|16|18");
+
     }
 
     public int converterParaInt(String string) {
         return Integer.parseInt(string);
     }
-
-//    public void comparapilha() {
-//        AnalisadorSemanticoVariaveis av = new AnalisadorSemanticoVariaveis(listaDeTokens);
-//    }
 }

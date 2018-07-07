@@ -15,10 +15,14 @@ import java.util.Stack;
  */
 public final class AnalisadorSemanticoVariaveis {
 
+    AnalisadorSemanticoVariaveisNaodeClarada asnc;
+
     private Lista listaDeTokens = new Lista();
     private Stack<Token> pilha = new Stack<>();
     private Semantico semantico = new Semantico();
     private int nivel = -1;
+    private Stack<String> palavra = new Stack<>();
+    int a;
 
     public AnalisadorSemanticoVariaveis(Lista listaDeTokens) {
         iniciarPilha(listaDeTokens);
@@ -40,13 +44,14 @@ public final class AnalisadorSemanticoVariaveis {
     }
 
     public void nivelvalor(Token token) {
-
         if (isCategoria(token)) {
             nivel++;
             semantico.setNivel(nivel);
             return;
         }
+
         switch (Integer.parseInt(token.getCodigo())) {
+
             case 7:
                 nivel--;
                 break;
@@ -62,22 +67,45 @@ public final class AnalisadorSemanticoVariaveis {
             case 2:
                 verificarLabel();
                 break;
+            case 6:
+                asnc = new AnalisadorSemanticoVariaveisNaodeClarada(listaDeTokens);
+                asnc.iniciarPilha(listaDeTokens);
+                break;
 
         }
+
+    }
+
+    public void verificarProce() {
+
+        while (!pilha.empty()) {
+            Token token = pilha.pop();
+            int codigo = converterParaInt(token.getCodigo());
+            if (codigo == 25) {
+                palavra.push(token.getNome());
+            } else if (codigo == 47) {
+                break;
+            }
+            nivelvalor(token);
+        }
+
     }
 
     public void verificarVar() {
+
         while (!pilha.empty()) {
             Token token = pilha.pop();
-            System.out.println(token.getNome());
             int codigo = converterParaInt(token.getCodigo());
             if (codigo == 25) {
-                System.out.println(token.getNome());
+                palavra.push(token.getNome());
                 semantico.insere(nivel, token.getNome());
             } else if (isCategoria(token) || codigo == 6) {
                 break;
             }
             nivelvalor(token);
+        }
+        for (int i = 0; i < palavra.size(); i++) {
+            System.out.println("Variais" + palavra.elementAt(i));
         }
     }
 
@@ -113,6 +141,7 @@ public final class AnalisadorSemanticoVariaveis {
         if (token.getCodigo().equals("5")) {
             nivel++;
             semantico.setNivel(nivel);
+            verificarProce();
 
         }
         return token.getCodigo().matches("1|5|13|16|18");
