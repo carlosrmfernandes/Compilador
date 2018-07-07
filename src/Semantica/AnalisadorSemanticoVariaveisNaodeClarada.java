@@ -60,16 +60,13 @@ public class AnalisadorSemanticoVariaveisNaodeClarada {
             int codigo = converterParaInt(token.getCodigo());
             if (codigo == 25) {
                 palavra2.push(token.getNome());
-                
-                
+
             } else if (codigo == 7) {
                 break;
             }
             nivelvalor(token);
         }
-        for (int i = 0; i < palavra2.size(); i++) {
-            System.out.println("Nao " + palavra2.elementAt(i));
-        }
+
     }
 
     public boolean isCategoria(Token token) {
@@ -84,5 +81,9 @@ public class AnalisadorSemanticoVariaveisNaodeClarada {
 
     public int converterParaInt(String string) {
         return Integer.parseInt(string);
+    }
+
+    public Stack<String> getPilha() {
+        return palavra2;
     }
 }

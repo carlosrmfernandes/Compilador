@@ -7,6 +7,9 @@ package Semantica;
 
 import Models.Lista;
 import Models.Token;
+import static java.util.Collections.list;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
 
 /**
@@ -16,6 +19,7 @@ import java.util.Stack;
 public final class AnalisadorSemanticoVariaveis {
 
     AnalisadorSemanticoVariaveisNaodeClarada asnc;
+    //Map<String ,Stack<String>> map = new HashMap<String, Stack<String>>();
 
     private Lista listaDeTokens = new Lista();
     private Stack<Token> pilha = new Stack<>();
@@ -26,6 +30,9 @@ public final class AnalisadorSemanticoVariaveis {
 
     public AnalisadorSemanticoVariaveis(Lista listaDeTokens) {
         iniciarPilha(listaDeTokens);
+//        map.put("Pilha_1", palavra);
+//        map.get("Pilha_1");
+
     }
 
     public void iniciarPilha(Lista lista) {
@@ -104,9 +111,7 @@ public final class AnalisadorSemanticoVariaveis {
             }
             nivelvalor(token);
         }
-        for (int i = 0; i < palavra.size(); i++) {
-            System.out.println("Variais" + palavra.elementAt(i));
-        }
+
     }
 
     public void verificarConst() {
@@ -151,4 +156,5 @@ public final class AnalisadorSemanticoVariaveis {
     public int converterParaInt(String string) {
         return Integer.parseInt(string);
     }
+
 }
