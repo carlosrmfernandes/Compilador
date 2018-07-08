@@ -18,36 +18,42 @@ import java.util.Stack;
  */
 public final class AnalisadorSemanticoVariaveis {
 
-    AnalisadorSemanticoVariaveisNaodeClarada asnc;
-    //Map<String ,Stack<String>> map = new HashMap<String, Stack<String>>();
-
     private Lista listaDeTokens = new Lista();
     private Stack<Token> pilha = new Stack<>();
+    private Stack<Token> pilha2 = new Stack<>();
+
     private Semantico semantico = new Semantico();
     private int nivel = -1;
     private Stack<String> palavra = new Stack<>();
-    int a;
+    private Stack<String> palavra2 = new Stack<>();
+
+    SematicaVerificar verificacao = new SematicaVerificar();
 
     public AnalisadorSemanticoVariaveis(Lista listaDeTokens) {
         iniciarPilha(listaDeTokens);
-//        map.put("Pilha_1", palavra);
-//        map.get("Pilha_1");
 
     }
 
     public void iniciarPilha(Lista lista) {
         for (int i = lista.getLista().size() - 1; i >= 0; i--) {
             pilha.push(lista.getLista().get(i));
+            pilha2.push(lista.getLista().get(i));
         }
     }
 
     public void analisar() {
-
+        Token token, token2;
         while (!pilha.empty()) {
-            Token token = pilha.pop();
-
+            token = pilha.pop();
             nivelvalor(token);
+
         }
+        while (!pilha2.empty()) {
+            token2 = pilha2.pop();
+            nivelvalor2(token2);
+
+        }
+        verificacao.Verificar(palavra, palavra2);
     }
 
     public void nivelvalor(Token token) {
@@ -67,18 +73,45 @@ public final class AnalisadorSemanticoVariaveis {
                 verificarVar();
                 break;
 
-            case 3:
-                //verificarConst();
-                break;
-
             case 2:
                 verificarLabel();
                 break;
+        }
+
+    }
+
+    public void nivelvalor2(Token token) {
+        if (isCategoria(token)) {
+            nivel++;
+            semantico.setNivel(nivel);
+            return;
+        }
+
+        switch (Integer.parseInt(token.getCodigo())) {
+
             case 6:
-                asnc = new AnalisadorSemanticoVariaveisNaodeClarada(listaDeTokens);
-                asnc.iniciarPilha(listaDeTokens);
+                verificarVariaeisBG();
+
                 break;
 
+            case 3:
+                //verificarConst();
+                break;
+        }
+
+    }
+
+    public void verificarVariaeisBG() {
+        while (!pilha2.empty()) {
+            Token token = pilha2.pop();
+            int codigo = converterParaInt(token.getCodigo());
+            if (codigo == 25) {
+                palavra2.push(token.getNome());
+
+            } else if (codigo == 7) {
+                break;
+            }
+            nivelvalor(token);
         }
 
     }
@@ -115,12 +148,13 @@ public final class AnalisadorSemanticoVariaveis {
     }
 
     public void verificarConst() {
-
         while (!pilha.empty()) {
             Token token = pilha.pop();
             int codigo = converterParaInt(token.getCodigo());
             if (codigo == 25) {
-                semantico.insere(nivel, token.getNome());
+                System.out.println("");
+                //palavra.push(token.getNome());
+                //semantico.insere(nivel, token.getNome());
             } else if (isCategoria(token) || codigo == 4) {
                 break;
             }
@@ -134,6 +168,7 @@ public final class AnalisadorSemanticoVariaveis {
             Token token = pilha.pop();
             int codigo = converterParaInt(token.getCodigo());
             if (codigo == 25) {
+                palavra.push(token.getNome());
                 semantico.insere(nivel, token.getNome());
             } else if (isCategoria(token) || codigo == 3) {
                 break;

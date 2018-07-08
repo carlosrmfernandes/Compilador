@@ -46,19 +46,4 @@ public class Semantico {
         this.nivel = nivel;
         init();
     }
-
-//    public void teste() {
-//        init();
-//
-//        insere(1, "a");
-//        insere(1, "blo");
-//        insere(2, "a");
-//        insere(2, "b");
-//
-//        insere(1, "a");
-//    }
-//
-//    public static void main(String args[]) {
-//        new Semantico().teste();
-//    }
 }
