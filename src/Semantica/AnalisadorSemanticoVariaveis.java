@@ -76,6 +76,7 @@ public final class AnalisadorSemanticoVariaveis {
             case 2:
                 verificarLabel();
                 break;
+
         }
 
     }
@@ -86,7 +87,6 @@ public final class AnalisadorSemanticoVariaveis {
             semantico.setNivel(nivel);
             return;
         }
-
         switch (Integer.parseInt(token.getCodigo())) {
 
             case 6:
@@ -96,6 +96,10 @@ public final class AnalisadorSemanticoVariaveis {
 
             case 3:
                 //verificarConst();
+                break;
+
+            case 7:
+                // verificarVariaeisEnd();
                 break;
         }
 
@@ -107,6 +111,22 @@ public final class AnalisadorSemanticoVariaveis {
             int codigo = converterParaInt(token.getCodigo());
             if (codigo == 25) {
                 palavra2.push(token.getNome());
+
+            } else if (codigo == 49) {
+                break;
+            }
+            nivelvalor(token);
+        }
+
+    }
+
+    public void verificarVariaeisEND() {
+        while (!pilha2.empty()) {
+            Token token = pilha2.pop();
+            int codigo = converterParaInt(token.getCodigo());
+            if (codigo == 25) {
+                System.out.println(token.getNome());
+                //palavra2.push(token.getNome());
 
             } else if (codigo == 7) {
                 break;

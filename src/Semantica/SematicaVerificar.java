@@ -21,6 +21,14 @@ public class SematicaVerificar {
 
     void Verificar(Stack<String> palavra, Stack<String> palavra2) {
 
+//        for (int i = 0; i < palavra.size(); i++) {
+//            System.out.println(palavra.get(i));
+//        }
+//        System.out.println("=====================================");
+//        for (int i = 0; i < palavra2.size(); i++) {
+//            System.out.println(palavra2.get(i));
+//        }
+
         int cont = 0;
 
         for (int i = 0; i < palavra2.size(); i++) {
