@@ -24,6 +24,7 @@ public final class AnalisadorSemanticoVariaveis {
 
     private Semantico semantico = new Semantico();
     private int nivel = -1;
+
     private Stack<String> palavra = new Stack<>();
     private Stack<String> palavra2 = new Stack<>();
 
@@ -62,7 +63,6 @@ public final class AnalisadorSemanticoVariaveis {
             semantico.setNivel(nivel);
             return;
         }
-
         switch (Integer.parseInt(token.getCodigo())) {
 
             case 7:
@@ -76,7 +76,9 @@ public final class AnalisadorSemanticoVariaveis {
             case 2:
                 verificarLabel();
                 break;
-
+            case 3:
+                //verificarConst();
+                break;
         }
 
     }
@@ -87,20 +89,17 @@ public final class AnalisadorSemanticoVariaveis {
             semantico.setNivel(nivel);
             return;
         }
+
         switch (Integer.parseInt(token.getCodigo())) {
 
             case 6:
                 verificarVariaeisBG();
 
                 break;
-
             case 3:
                 //verificarConst();
                 break;
 
-            case 7:
-                // verificarVariaeisEnd();
-                break;
         }
 
     }
@@ -113,22 +112,6 @@ public final class AnalisadorSemanticoVariaveis {
                 palavra2.push(token.getNome());
 
             } else if (codigo == 49) {
-                break;
-            }
-            nivelvalor(token);
-        }
-
-    }
-
-    public void verificarVariaeisEND() {
-        while (!pilha2.empty()) {
-            Token token = pilha2.pop();
-            int codigo = converterParaInt(token.getCodigo());
-            if (codigo == 25) {
-                System.out.println(token.getNome());
-                //palavra2.push(token.getNome());
-
-            } else if (codigo == 7) {
                 break;
             }
             nivelvalor(token);
@@ -172,7 +155,7 @@ public final class AnalisadorSemanticoVariaveis {
             Token token = pilha.pop();
             int codigo = converterParaInt(token.getCodigo());
             if (codigo == 25) {
-                System.out.println("");
+                //System.out.println(token.getNome());
                 //palavra.push(token.getNome());
                 //semantico.insere(nivel, token.getNome());
             } else if (isCategoria(token) || codigo == 4) {
